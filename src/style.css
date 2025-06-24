@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "MyFont";
-  src: url("./asset/fonts/montserrat-regular-webfont.woff2") format("woff2");
+  src: url("./asset/fonts/montserrat-bold-webfont.woff2") format("woff2");
   font-weight: 700; /* para bold */
   font-style: normal;
 }
@@ -78,15 +78,13 @@ body {
 
 /*  ---------------------------------------------TITULO NUEVA COLLECION--------------------------- */
 
-h1 {
+.mayuscula-bold {
   font-family: "MyFont", sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.mayuscula-bold {
+.mayuscula-bold::first-letter {
   font-size: 1.5em;
-  font-weight: 900;
 }
 
 /*  ------------------------------------------------CARD  DE LA NUEVA COLLECION--------------------------- */
