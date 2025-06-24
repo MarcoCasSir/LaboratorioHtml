@@ -50,6 +50,7 @@ body {
 /*  -----------------------------------BARRA DE NAVEGACION --------------------------------------- */
 
 .nav-container {
+  font-size: 16px;
   position: fixed;
   top: 0;
   left: 0;
@@ -61,7 +62,6 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  border-bottom: 1px var(--color2);
 }
 
 main {
@@ -95,7 +95,9 @@ main {
 
 .mayuscula-bold {
   font-family: "MyFont", sans-serif;
+  font-size: 32px;
   font-weight: 700;
+  padding-left: 35px;
 }
 
 .mayuscula-bold::first-letter {
@@ -115,6 +117,7 @@ main {
 /*  ------------------------------------------------CARD  DE LA NUEVA COLLECION--------------------------- */
 
 .card {
+  font-size: 14px;
   display: grid;
   grid-template-areas:
     "image image"
@@ -136,6 +139,7 @@ main {
   grid-area: name;
   text-align: left;
   font-weight: 400;
+  align-content: center;
 }
 
 .card-price {
@@ -151,6 +155,7 @@ main {
 /*  -------------------------------------------------------FOOTER ---------------------------------------- */
 
 .foot-container {
+  font-size: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -172,9 +177,9 @@ main {
 .foot-left img {
   border-radius: 50%;
   background-color: var(--color1);
-  width: 30px;
-  height: 30px;
-  padding: px;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
 }
 
 .foot-container-leftcenter {
