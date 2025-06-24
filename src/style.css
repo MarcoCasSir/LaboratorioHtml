@@ -50,15 +50,27 @@ body {
 /*  -----------------------------------BARRA DE NAVEGACION --------------------------------------- */
 
 .nav-container {
-  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  background-color: var(--color1);
+  padding: 20px 10px;
+  margin: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  border-bottom: 1px var(--color2);
+}
+
+main {
+  margin-top: 80px;
 }
 
 .nav-container div {
-  padding: 20px;
-  margin: 10px;
+  padding: 0 20px;
+  margin: 0;
 }
 
 .nav-container-center a {
@@ -96,6 +108,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  justify-items: center;
+  justify-content: center;
 }
 
 /*  ------------------------------------------------CARD  DE LA NUEVA COLLECION--------------------------- */
@@ -109,6 +123,7 @@ body {
   gap: 0.5em;
   align-items: center;
   max-width: 300px;
+  margin-bottom: 50px;
 }
 
 .card-image {
