@@ -35,6 +35,9 @@ body {
   main {
     flex-direction: column;
   }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*  ---------------------------------CONTENEDOR PRINCIPAL---------------------------------------- */
@@ -87,39 +90,80 @@ body {
   font-size: 1.5em;
 }
 
+/*  ------------------------------------------------CONTENEDOR NUEVA COLLECION - GRID --------------------------- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 /*  ------------------------------------------------CARD  DE LA NUEVA COLLECION--------------------------- */
 
 .card {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 8px;
+  grid-template-areas:
+    "image image"
+    "name  price";
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+  align-items: center;
+  max-width: 300px;
 }
 
-img {
-  border-radius: 15px;
+.card-image {
+  grid-area: image;
+  width: 100%;
+  display: block;
 }
 
-.price {
+.card-name {
+  grid-area: name;
+  text-align: left;
+  font-weight: 400;
+}
+
+.card-price {
+  grid-area: price;
+  text-align: right;
   font-weight: 700;
-  font-style: normal;
+}
+
+.card-image {
+  border-radius: 15px;
 }
 
 /*  -------------------------------------------------------FOOTER ---------------------------------------- */
 
 .foot-container {
-  font-size: 16px;
-  background-color: var(--color2);
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 10px;
-  padding: 20px;
+  padding: 30px;
+  background-color: var(--color2);
 }
 
-.foot-container div {
-  border: 1px solid black;
-  flex: 0 0 auto;
-  width: 100px;
-  height: 100px;
-  background-color: lightgray;
+.foot-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-weight: 400;
+  color: var(--color1);
+}
+
+.foot-left img {
+  border-radius: 50%;
+  background-color: var(--color1);
+  width: 30px;
+  height: 30px;
+  padding: px;
+}
+
+.foot-container-leftcenter {
+  display: flex;
+  align-items: center;
+  color: var(--color1);
 }
