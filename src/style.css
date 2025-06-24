@@ -12,7 +12,14 @@
 @font-face {
   font-family: "MyFont";
   src: url("./asset/fonts/montserrat-regular-webfont.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 400; /*para Regular*/
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: url("./asset/fonts/montserrat-regular-webfont.woff2") format("woff2");
+  font-weight: 700; /* para bold */
   font-style: normal;
 }
 
@@ -30,10 +37,14 @@ body {
   }
 }
 
+/*  ---------------------------------CONTENEDOR PRINCIPAL---------------------------------------- */
+
 .flex-container {
   display: flex;
   flex-direction: column;
 }
+
+/*  -----------------------------------BARRA DE NAVEGACION --------------------------------------- */
 
 .nav-container {
   font-size: 16px;
@@ -56,12 +67,47 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 40px;
+  align-items: center;
 }
 
-h1 {
-  font-size: 32px;
+.nav-container-right {
+  display: flex;
+  gap: 80px;
 }
+
+/*  ---------------------------------------------TITULO NUEVA COLLECION--------------------------- */
+
+h1 {
+  font-family: "MyFont", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.mayuscula-bold {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+/*  ------------------------------------------------CARD  DE LA NUEVA COLLECION--------------------------- */
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+
+img {
+  border-radius: 15px;
+}
+
+.price {
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*  -------------------------------------------------------FOOTER ---------------------------------------- */
 
 .foot-container {
   font-size: 16px;
