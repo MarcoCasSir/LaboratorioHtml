@@ -117,7 +117,7 @@ main {
 /*  ------------------------------------------------CARD  DE LA NUEVA COLLECION--------------------------- */
 
 .card {
-  /*font-size: 0.875rem;*/
+  font-size: 0.875rem;
   display: grid;
   grid-template-areas:
     "image image"
@@ -130,8 +130,10 @@ main {
 
 .card-image {
   grid-area: image;
-  width: 100%;
+  width: 340px;
+  height: 486px;
   display: block;
+  border-radius: 15px;
 }
 
 .card-name {
@@ -149,10 +151,6 @@ main {
   font-weight: 700;
   margin-top: 30px;
   padding-right: 15px;
-}
-
-.card-image {
-  border-radius: 15px;
 }
 
 /*  -------------------------------------------------------FOOTER ---------------------------------------- */
