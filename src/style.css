@@ -28,23 +28,13 @@ body {
   font-weight: 400;
 }
 
-@media (max-width: 920px) {
-  .foot-container {
-    flex-direction: column;
-  }
-  main {
-    flex-direction: column;
-  }
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-}
+/*  ------------------------------------------------MAIN --------- --------------------------------------- */
 
-/*  ---------------------------------CONTENEDOR PRINCIPAL---------------------------------------- */
-
-.flex-container {
+main {
+  max-width: 1280px; /* defino el ancho maximo de la pagina*/
+  margin: 0 auto; /* permite ajustar las cards se centren */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* se ajustan las cards en columnas */
 }
 
 /*  -----------------------------------BARRA DE NAVEGACION --------------------------------------- */
@@ -52,24 +42,20 @@ body {
 .nav-container {
   font-size: 1rem;
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100%;
   z-index: 9;
   background-color: var(--color1);
-  padding: 20px 10px;
+  padding: 2rem 2rem;
   margin: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
-main {
-  margin-top: 80px;
-}
-
 .nav-container div {
-  padding: 0 20px;
+  padding: 0 1rem;
   margin: 0;
 }
 
@@ -82,13 +68,13 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 5rem;
   align-items: center;
 }
 
 .nav-container-right {
   display: flex;
-  gap: 80px;
+  gap: 1.5rem;
 }
 
 /*  ---------------------------------------------TITULO NUEVA COLLECION--------------------------- */
@@ -97,7 +83,7 @@ main {
   font-family: "MyFont", sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  padding-left: 35px;
+  padding-left: 3.5rem;
 }
 
 .mayuscula-bold::first-letter {
@@ -120,7 +106,7 @@ main {
   font-size: 0.875rem;
   display: grid;
   grid-template-areas:
-    "image image"
+    "image image "
     "name  price";
   grid-template-columns: 1fr 1fr;
   column-gap: 200px;
@@ -130,7 +116,7 @@ main {
 
 .card-image {
   grid-area: image;
-  width: 340px;
+  max-width: 100%;
   height: 486px;
   display: block;
   border-radius: 15px;
@@ -156,7 +142,7 @@ main {
 /*  -------------------------------------------------------FOOTER ---------------------------------------- */
 
 .foot-container {
-  font-size: 16px;
+  font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -187,4 +173,54 @@ main {
   display: flex;
   align-items: center;
   color: var(--color1);
+}
+
+/* -------------------------------------  MEDIA QUERY  PARA EL NAVEGADOR ----------------------------------*/
+
+@media (max-width: 920px) {
+  .nav-container-center,
+  .nav-container-right {
+    display: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .nav-container {
+    display: flex;
+    justify-content:center;
+    padding: 1rem;
+    align-items: center;
+    width: 100%; /
+  }
+}
+
+/* -------------------------------------  MEDIA QUERY  PARA LAS FOTOS ----------------------------------*/
+
+@media (max-width: 920px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    margin-top: 20PX;
+    grid-template-columns: 1fr;
+  }}
+
+@media (max-width: 600px) {
+  .mayuscula-bold {
+    margin-top: 80PX;
+    grid-template-columns: 1fr;
+  }}
+
+  /* -------------------------------------  MEDIA QUERY  PARA EL FOOTER ----------------------------------*/
+
+@media (max-width: 920px) {
+  
+  .foot-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
