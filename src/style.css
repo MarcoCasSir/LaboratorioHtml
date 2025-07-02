@@ -52,6 +52,7 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  
 }
 
 .nav-container div {
@@ -84,6 +85,7 @@ main {
   font-size: 2rem;
   font-weight: 700;
   padding-left: 3.5rem;
+  margin-top: 100px;
 }
 
 .mayuscula-bold::first-letter {
@@ -136,18 +138,17 @@ main {
   text-align: right;
   font-weight: 700;
   margin-top: 30px;
-  padding-right: 15px;
+  padding-right: 2px;
 }
 
 /*  -------------------------------------------------------FOOTER ---------------------------------------- */
-
 .foot-container {
   font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
-  padding: 30px;
+  padding: 20px;
   background-color: var(--color2);
 }
 
@@ -162,11 +163,11 @@ main {
 }
 
 .foot-left img {
-  border-radius: 50%;
   background-color: var(--color1);
-  width: 40px;
+  border-radius: 50%;        
+  width: 40px;               
   height: 40px;
-  padding: 9px;
+  padding: 8px;             
 }
 
 .foot-container-leftcenter {
@@ -174,7 +175,6 @@ main {
   align-items: center;
   color: var(--color1);
 }
-
 /* -------------------------------------  MEDIA QUERY  PARA EL NAVEGADOR ----------------------------------*/
 
 @media (max-width: 920px) {
@@ -216,11 +216,11 @@ main {
 
   /* -------------------------------------  MEDIA QUERY  PARA EL FOOTER ----------------------------------*/
 
-@media (max-width: 920px) {
+@media (max-width: 600px) {
   
   .foot-container {
     flex-direction: column;
-    align-items: center;
+    align-items:flex-start;
     gap: 1rem;
   }
 }
